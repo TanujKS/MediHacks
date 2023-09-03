@@ -155,7 +155,8 @@ a:hover, a:focus, a:active, a:visited {
     padding: 60px;
     flex: 1;
   }
-  
+
+
 .half-black {
     display: flex; 
     justify-content: center; /* Center horizontally */
@@ -164,6 +165,21 @@ a:hover, a:focus, a:active, a:visited {
     color: white;
     height: 700px; 
     flex: 1;
+}
+
+.counter-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.counter {
+    padding: 30px;
+    padding-left: 0px;
+}
+
+.counter h3 {
+    margin-left: 10px;
 }
 
 .half-black .rocket {
@@ -176,6 +192,7 @@ a:hover, a:focus, a:active, a:visited {
 .hero-header h1 {
 	margin: 1em 0 0 0;
 }
+
 .hero-header h4 {
 	font-weight: normal;
 	opacity: 0.6;

@@ -20,7 +20,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
     </head>
-    <body id="page-top" data-spy="scroll" data-target=".side-menu">
+    <body onload="load()" id="page-top" data-spy="scroll" data-target=".side-menu">
       <nav class="side-menu hidden-xs">
         <ul>
           <li class="hidden active">
@@ -55,17 +55,38 @@
       <div class="container-fluid">
         <!-- Start: Header -->
         <div class="row hero-header" id="home">
-          <div class="col-md-7 half-green">
-            <h1 id="eventname">&lt;MediHacks 2023 /&gt;</h1>
-            <h3>Get ready for the first MediHacks Hackathon</h3>
-            <h3>An online 3-day event focused on students creating applications involving health tech</h3>
-            <h4>8th<sup>th</sup> to 10<sup>th</sup>  September, 2023</h4>
-            <a href="https://medihacks.devpost.com/" class="btn btn-lg btn-red">Sign Up on DevPost Now! <span class="ti-arrow-right"></span></a>
-            <div>
+            <div class="col-md-7 half-green">
+              <h1 id="eventname">&lt;MediHacks 2023 /&gt;</h1>
+              <h3>Get ready for the first MediHacks Hackathon</h3>
+              <h3>An online 3-day event focused on students creating applications involving health tech</h3>
+              <h4>8th<sup>th</sup> to 10<sup>th</sup>  September, 2023</h4>
+              <a href="https://medihacks.devpost.com/" class="btn btn-lg btn-red">Sign Up on DevPost Now! <span class="ti-arrow-right"></span></a>
               <a href="https://discord.gg/cFF2CSr4n8" class="btn btn-lg btn-blu">Join our Discord! <span class="ti-arrow-right"></span></a>
-            </div>
-          </div>
 
+              <div class="counter-container">
+                <div class="counter">
+                  <h1 id='0101' class="fs-2 text-light" style="display: inline-block">0</h1>
+                  <h3 class="text-light" style="display: inline-block">Participants</h3>  
+                </div>
+
+                <div class="counter">
+                  <h1 id='0102' class="fs-2 text-light" style="display: inline-block">0</h1>
+                  <h3 class="text-light" style="display: inline-block">Judges</h3>  
+                </div>
+
+                <div class="counter">
+                  <h1 id='0103' class="fs-2 text-light" style="display: inline-block">0</h1>
+                  <h3 class="text-light" style="display: inline-block">Sponsors</h3>  
+                </div>
+              </div>
+       
+            </div>
+
+
+
+   
+
+          
           <div class="col-md-5 hidden-xs half-black">
             <img src="img/medihackslogo.png" class="rocket animated bounce">
           </div>
@@ -164,7 +185,7 @@
             </ul>
           </div>
           <div class="col-md-2 col-sm-4 feature">
-            <img src="https://media.licdn.com/dms/image/D5635AQFvLu9mdzZ0zg/profile-framedphoto-shrink_200_200/0/1685663826569?e=1693612800&v=beta&t=ZY8MB-FeTnPVpBoVM4ENRTKcNel5Npbg0e3L4d2VPs0" class="speaker-img">
+            <img src="https://media.licdn.com/dms/image/D5635AQFvLu9mdzZ0zg/profile-framedphoto-shrink_200_200/0/1685663826569?e=1694368800&v=beta&t=BwP9gE_6pW5irmKndZzzxyBUuNnyC8rn0PWDk86viwE" class="speaker-img">
             <h3>Dilip Jagadeesh</h3>
             <p></p>
             <ul class="speaker-social">
@@ -336,6 +357,8 @@
           <img src="img/bayun.png" class="sponsor-logo"/>
           <h2 class="row-title sponsor-tier" id="bronze-tier">Bronze Sponsors</h2>  
           <img src="img/leangap.png" class="sponsor-logo"/>
+          <img src="img/ccir.png" class="sponsor-logo"/>
+          <img src="img/brewapps.png" class="sponsor-logo"/>
           <h2 class="row-title sponsor-tier">In-Kind Sponsors</h2>  
           <img src="img/hcb.png" class="in-kind">
           <img src="img/aops.png" class="in-kind">
@@ -394,16 +417,6 @@
                       <div class="media-body">
                         <h4 class="media-heading">Work Day!</h4>
                         <p>The grind continues! Use this time to develop your application.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="media">
-                      <div class="media-body">
-                        <h4 class="media-heading">TBD</h4>
-                        <h5>Guest Speaker from Twilio</h5>
-                        <p>Attend a live workshop with a represntative from Twilio and learn how to properly harness their product.</p>
                       </div>
                     </div>
                   </div>
@@ -470,5 +483,46 @@
       <script src="js/scrolling-nav.js"></script>
       <script src="js/validator.js"></script>
 
+      <script>
+        function animate(obj, initVal, lastVal, duration) {
+           let startTime = null;
+  
+        //get the current timestamp and assign it to the currentTime variable
+        let currentTime = Date.now();
+  
+        //pass the current timestamp to the step function
+        const step = (currentTime ) => {
+  
+        //if the start time is null, assign the current time to startTime
+        if (!startTime) {
+           startTime = currentTime ;
+        }
+  
+        //calculate the value to be used in calculating the number to be displayed
+        const progress = Math.min((currentTime - startTime)/ duration, 1);
+  
+        //calculate what to be displayed using the value gotten above
+        obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
+  
+        //checking to make sure the counter does not exceed the last value (lastVal)
+        if (progress < 1) {
+           window.requestAnimationFrame(step);
+        } else {
+              window.cancelAnimationFrame(window.requestAnimationFrame(step));
+           }
+        };
+        //start animating
+           window.requestAnimationFrame(step);
+        }
+        let text1 = document.getElementById('0101');
+        let text2 = document.getElementById('0102');
+        let text3 = document.getElementById('0103');
+
+        const load = () => {
+           animate(text1, 0, 220, 2000);
+           animate(text2, 0, 10, 2000);
+           animate(text3, 0, 15, 2000);
+        }
+     </script>
     </body>
     </html>
