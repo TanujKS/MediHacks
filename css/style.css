@@ -120,6 +120,7 @@ a:hover, a:focus, a:active, a:visited {
 
 .sponsor-tier {
     margin: 35px;
+    font-weight: 500;
 }
 
 .in-kind {
@@ -129,17 +130,16 @@ a:hover, a:focus, a:active, a:visited {
 
 .sponsor-logo {
     height: auto;
-    max-width: 100%;
+    max-width: 30%;
+    padding: 20px;
 }
 
 #silver-tier {
     color: rgb(119, 119, 119);
-    font-weight: 500;
 }
 
 #bronze-tier {
     color: rgb(134, 37, 1);
-    font-weight: 500;
 }
 
 .hero-header {
@@ -212,10 +212,7 @@ a:hover, a:focus, a:active, a:visited {
 .row-title {
 	font-weight: 400;
 }
-.feature {
-	padding: 20px;
-	margin-top: 30px;
-}
+
 .feature span {
 	font-size: 5em;
     color: #016cc7;
@@ -226,17 +223,22 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 .speaker .feature, .speaker .judge {
-	width: 31.333333%;
+	width: 31.3333333%;
 	-webkit-transition: all 0.3s;
   	-moz-transition: all 0.3s;
   	transition: all 0.3s;
   	margin-right: 20px;
   	border: 3px solid #f6f6f6;
     border-radius: 5px;
+	padding: 20px;
+	margin-top: 30px;
+}
+
+.speaker .feature {
+    height: 300px;
 }
 
 .speaker .judge {
-    margin-top: 20px;
     margin-bottom: 50px;
 }
 
@@ -418,6 +420,7 @@ ul.footer-menu li a:hover {
 
     .sponsor-logo {
         padding: 20px;
+        max-width: 100%;
     }
     
     .speaker .feature, .speaker .judge{
