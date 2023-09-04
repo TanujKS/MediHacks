@@ -221,14 +221,6 @@ a:hover, a:focus, a:active, a:visited {
     color: #016cc7;
 }
 
-#last-speaker {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 100px;
-    padding-top:0px;
-    margin-top: 0px;
-}
-
 .speaker {
     padding-bottom: 0px;
 }
@@ -280,7 +272,9 @@ a span.ti-twitter-alt {
 
 .tickets {
 	background-color: #fcd93b;
+    margin-top: 100px;
 }
+
 .tickets .price {
 	font-size: 30px;
 	color: #a33919;
@@ -426,9 +420,10 @@ ul.footer-menu li a:hover {
         padding: 20px;
     }
     
-    .speaker .feature, .speaker .judge {
+    .speaker .feature, .speaker .judge{
         width: 100%
     }
+
     .footer-credit {
         text-align: center;
         padding: 40px 20px;
