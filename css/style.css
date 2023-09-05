@@ -222,6 +222,10 @@ a:hover, a:focus, a:active, a:visited {
     padding-bottom: 0px;
 }
 
+.feature, .judge {
+    margin-top: 30px;
+}
+
 .speaker .feature, .speaker .judge {
 	width: 31.3333333%;
 	-webkit-transition: all 0.3s;
@@ -231,7 +235,6 @@ a:hover, a:focus, a:active, a:visited {
   	border: 3px solid #f6f6f6;
     border-radius: 5px;
 	padding: 20px;
-	margin-top: 30px;
 }
 
 .speaker .feature {
