@@ -670,7 +670,7 @@ ol {
 
 .schedule-tab .nav-tabs .nav-item {
 	border-right: 1px solid #e7e7e8;
-	width: 20%;
+	width: 12.5%;
 	text-align: center;
 }
 
@@ -849,6 +849,13 @@ ol {
 	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 26px;
+}
+
+.price-item h5 {
+	color: #171822;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 10px;
 }
 
 .price-item .pi-price {
@@ -1274,7 +1281,7 @@ ol {
 
 .breadcrumb-text h2 {
 	font-size: 40px;
-	color: #171822;
+	color: #e3e3e3;
 	font-weight: 600;
 	margin-bottom: 14px;
 }
@@ -1528,8 +1535,10 @@ ol {
 }
 
 .speaker-item .si-pic img {
-	min-width: 100%;
-	border-radius: 2px;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background-color: red;
 }
 
 .speaker-item .si-text .si-title {
