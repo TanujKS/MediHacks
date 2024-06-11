@@ -191,6 +191,19 @@ ol {
 	background-image: linear-gradient(to right, #ee8425 0%, #f9488b 100%), linear-gradient(to right, #ee8425 0%, #f9488b 100%);
 }
 
+.discord-btn {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 12px 40px;
+	color: #ffffff;
+	text-align: center;
+	border-radius: 50px;
+	background-image: -webkit-gradient(linear, right top, left top, from(#5865F2), to(#7289DA)), -webkit-gradient(linear, right top, left top, from(#5865F2), to(#7289DA));
+	background-image: -o-linear-gradient(right, #5865F2 0%, #7289DA 100%), -o-linear-gradient(right, #5865F2 0%, #7289DA 100%);
+	background-image: linear-gradient(to left, #5865F2 0%, #7289DA 100%), linear-gradient(to left, #5865F2 0%, #7289DA 100%);
+}
+
 .site-btn {
 	font-size: 16px;
 	color: #ffffff;

@@ -36,6 +36,6 @@ def sort_age(age):
 for age in ages:
     sort_age(age)
 
-print(len(bracket_1) / len(ages), bracket_1)
+print(len(bracket_1), len(bracket_1) / len(ages), bracket_1)
 print(len(bracket_2), len(bracket_2) / len(ages), bracket_2)
 print(len(bracket_3) / len(ages), bracket_3)
