@@ -2152,20 +2152,38 @@ ol {
   Contact Top Content
 -----------------------*/
 
+
 .contact-content-section {
 	overflow: hidden;
 }
 
 .cc-text {
-	height: 580px;
-	margin-left: -15px;
-	margin-right: -15px;
-	padding-top: 94px;
+	text-align: left;
+	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.underline {
+	font-size: 20px;
+	color: #e3e3e3;
+	font-weight: 600;
+	position: relative;
+}
+
+.underline::after {
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	height: 2px;
+	width: 36%;
+	background: #f44949;
+	content: "";
 }
 
 .cc-text .section-title {
 	text-align: left;
-	margin-bottom: 42px;
 }
 
 .cc-text .section-title h2 {
@@ -2200,82 +2218,48 @@ ol {
 	color: #ffffff;
 }
 
-.cc-map {
-	height: 580px;
-	margin-left: -15px;
-	margin-right: -15px;
-	position: relative;
+.cc-img {
+	display: flex;
+	justify-content: flex-start;
 }
 
-.cc-map iframe {
-	width: 100%;
-}
-
-.cc-map .map-hover {
-	position: absolute;
-	left: 50%;
-	top: 260px;
-	-webkit-transform: translateX(-132px);
-	-ms-transform: translateX(-132px);
-	transform: translateX(-132px);
-}
-
-.cc-map .map-hover i {
-	font-size: 30px;
-	color: #f44949;
-	position: absolute;
-	left: 50%;
-	top: -55px;
-	-webkit-transform: translateX(-9px);
-	-ms-transform: translateX(-9px);
-	transform: translateX(-9px);
-}
-
-.cc-map .map-hover .map-hover-inner {
-	width: 264px;
-	text-align: center;
-	background: #ffffff;
-	padding: 27px 0 11px;
-	-webkit-box-shadow: 0px 0px 30px rgba(74, 101, 106, 0.2);
-	box-shadow: 0px 0px 30px rgba(74, 101, 106, 0.2);
-}
-
-.cc-map .map-hover .map-hover-inner:after {
-	position: absolute;
-	left: 50%;
-	top: -6px;
-	width: 30px;
-	height: 30px;
-	background: #ffffff;
-	content: "";
-	-webkit-transform: translateX(-15px) rotate(45deg);
-	-ms-transform: translateX(-15px) rotate(45deg);
-	transform: translateX(-15px) rotate(45deg);
-}
-
-.cc-map .map-hover .map-hover-inner h5 {
-	color: #171822;
-	font-weight: 600;
-	margin-bottom: 7px;
-}
-
-.cc-map .map-hover .map-hover-inner p {
-	color: #171822;
-}
 
 /*---------------------
   Contact Form
 -----------------------*/
 
-.comment-form.contact-form input {
+.comment-form .contact-form input {
 	margin-bottom: 25px;
 }
 
-.comment-form.contact-form textarea {
+.comment-form .contact-form textarea {
 	height: 150px;
 	margin-bottom: 42px;
 }
 
+#codeResult {
+	margin-top: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+#codeResult h3 {
+	color: #e3e3e3;
+}
+
+#codeResult i {
+	cursor: pointer;
+	color: #007bff;
+	text-decoration: none;
+	font-size: 25px;
+	position: absolute;
+	bottom: 5px;
+}
+#codeResult i:hover {
+	color: #0056b3;
+}
 /*-------------------------------- Respinsive Media Styles --------------------------------*/
 
 @media only screen and (min-width: 1200px) {
