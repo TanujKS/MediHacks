@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css?version=2" type="text/css">
 </head>
 
 <body>
@@ -78,36 +78,39 @@
     <!-- Contact Form Section Begin -->
     <section class="contact-from-section spad">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>Get your referral code</h2>
-                        <p>Fill out the form below to recieve a code that your friends can use when they sign up for MediHacks</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <form id="referralForm" class="comment-form contact-form">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <input type="text" id="name" placeholder="Name" required>
-                            </div>
-                            <div class="col-lg-4">
-                                <input type="email" id="email" placeholder="Email" required>
-                            </div>
-                            <div class="col-lg-4">
-                                <input type="tel" id="phone" placeholder="Phone" required>
-                            </div>
-                            <div class="col-lg-12 text-center">
-                                <button type="submit" class="site-btn">Get Code</button>
+            <div class="row referral-container">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title">
+                                <h2>Get your referral code</h2>
+                                <p>Fill out the form below to recieve a code that your friends can use when they sign up for MediHacks</p>
                             </div>
                         </div>
-                    </form>
-                    <div id="codeResult" class="text-center">
-                        <!-- <h3>Your referral code is <b>test</b></h3>      
-                        <a id="copyLink" title="Copy to clipboard"><i class="fa fa-clipboard"></i></a> -->
                     </div>
+                    <div class="row">
+                        <div class="col-lg-12 form-container">
+                            <form id="referralForm" class="comment-form contact-form">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <input type="text" id="name" placeholder="Name" required>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <input type="email" id="email" placeholder="Email" required>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <input type="tel" id="phone" placeholder="Phone" required>
+                                    </div>
+                                    <div class="col-lg-12 text-center">
+                                        <button type="submit" class="site-btn">Get Code</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" id="codeResult">
+                    <h3>Your referral code is:</h3>
                 </div>
             </div>
         </div>
@@ -188,7 +191,7 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/codes.js"></script>
+    <script src="js/codes.js?v=1"></script>
 </body>
 
 </html>
