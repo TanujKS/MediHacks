@@ -2301,7 +2301,7 @@ ol {
 #codeResult i:hover {
 	color: #0056b3;
 }
-/*-------------------------------- Respinsive Media Styles --------------------------------*/
+/*-------------------------------- Responsive Media Styles --------------------------------*/
 
 @media only screen and (min-width: 1200px) {
 	.container {
