@@ -431,8 +431,15 @@ ol {
 	color: #ffffff;
 	line-height: 72px;
 	font-weight: 600;
-	margin-top: 24px;
-	margin-bottom: 35px;
+	margin-top: 15px;
+}
+
+.hero-section .hero-text h3 {
+	font-size: 30px;
+	color: #ffffff;
+	line-height: 72px;
+	font-weight: 500;
+	margin-bottom: 20px;
 }
 
 /*---------------------
@@ -518,9 +525,6 @@ ol {
 	border-radius: 2px;
 }
 
-.ha-text {
-	padding-top: 74px;
-}
 
 .ha-text h2 {
 	color: #e3e3e3;
@@ -572,6 +576,11 @@ ol {
 
 .team-member-section {
 	overflow: hidden;
+}
+
+.team-member-section .img-row {
+	padding-left: 50;
+	padding-right: 50;
 }
 
 .team-member-section .section-title h2 {
@@ -1564,18 +1573,18 @@ ol {
 }
 
 .speaker-item .si-pic img {
-	width: 50px;
-	height: 50px;
-	border-radius: 25px;
-	background-color: red;
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
 }
 
-.speaker-item .si-text .si-title {
+.speaker-item .si-text {
 	margin-bottom: 28px;
+	margin-top: 20px;
 }
 
 .speaker-item .si-text .si-title h4 {
-	color: #171822;
+	color: #ffffff;
 	font-weight: 600;
 	margin-bottom: 13px;
 }
@@ -1587,7 +1596,11 @@ ol {
 }
 
 .speaker-item .si-text .si-social {
-	margin-bottom: 24px;
+	margin-bottom: 20px;
+}
+
+.speaker-item .si-text .si-social {
+	margin-top: 10px;
 }
 
 .speaker-item .si-text .si-social a {
@@ -1612,6 +1625,7 @@ ol {
 .speaker-item .si-text p {
 	color: #bdbdbd;
 	line-height: 26px;
+	margin-top: 10px;
 }
 
 .load-more {
