@@ -442,6 +442,9 @@ ol {
 	margin-bottom: 20px;
 }
 
+.hero-section .hero-text p {
+	color: #ffffff
+}
 /*---------------------
   Conter
 -----------------------*/
@@ -553,14 +556,14 @@ ol {
 	color: #f44949;
 }
 
-.ha-text .ha-btn {
+.ha-btn {
 	font-size: 16px;
 	color: #e3e3e3;
 	font-weight: 600;
 	position: relative;
 }
 
-.ha-text .ha-btn:before {
+.ha-btn:before {
 	position: absolute;
 	left: 0;
 	bottom: -6px;
@@ -833,6 +836,8 @@ ol {
 
 .pricing-section .section-title {
 	margin-bottom: 88px;
+	padding-left: 60px;
+	padding-right: 60px;
 }
 
 .pricing-section .section-title h1 {
@@ -1351,7 +1356,7 @@ ol {
 -----------------------*/
 
 .about-section {
-	padding-top: 0;
+	padding-top: 75px;
 	padding-bottom: 90px;
 }
 
