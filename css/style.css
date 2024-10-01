@@ -442,8 +442,11 @@ ol {
 	margin-bottom: 20px;
 }
 
+.hero-section .hero-text p {
+	color: #ffffff
+}
 /*---------------------
-  Conter
+  Counter
 -----------------------*/
 
 .counter-section {
@@ -471,7 +474,7 @@ ol {
 	text-align: center;
 	margin-left: 35px;
 	height: 120px;
-	width: 120px;
+	width: 180px;
 	padding-top: 32px;
 	position: relative;
 }
@@ -482,10 +485,8 @@ ol {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	border: 2px solid #ffffff;
 	content: "";
 	opacity: 0.1;
-	border-radius: 4px;
 }
 
 .counter-section .cd-timer .cd-item:first-child {
@@ -553,14 +554,14 @@ ol {
 	color: #f44949;
 }
 
-.ha-text .ha-btn {
+.ha-btn {
 	font-size: 16px;
 	color: #e3e3e3;
 	font-weight: 600;
 	position: relative;
 }
 
-.ha-text .ha-btn:before {
+.ha-btn:before {
 	position: absolute;
 	left: 0;
 	bottom: -6px;
@@ -833,6 +834,8 @@ ol {
 
 .pricing-section .section-title {
 	margin-bottom: 88px;
+	padding-left: 60px;
+	padding-right: 60px;
 }
 
 .pricing-section .section-title h1 {
@@ -1204,19 +1207,22 @@ ol {
 }
 
 .partner-logo {
-	padding-bottom: 50px;
-	border-bottom: 1px solid #2f3039;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+	padding: 10px 25px;
+    border-bottom: 1px solid #2f3039;
+    background: #ffffff;
 }
 
 .partner-logo .pl-table {
-	display: inline-block;
-	display: table;
+    margin: 0 10px; /* Add margin to space logos */
 }
 
-.partner-logo .pl-table .pl-tablecell {
-	display: table-cell;
-	vertical-align: middle;
-	height: 41px;
+.partner-logo img {
+    height: 60px;
+	width: auto;
+    object-fit: contain; /* Ensure the aspect ratio is maintained */
 }
 
 .footer-text {
@@ -1351,7 +1357,7 @@ ol {
 -----------------------*/
 
 .about-section {
-	padding-top: 0;
+	padding-top: 75px;
 	padding-bottom: 90px;
 }
 

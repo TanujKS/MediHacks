@@ -39,7 +39,7 @@
 		Partner Slider
     ----------------------- */
     $(".partner-logo").owlCarousel({
-        items: 6,
+        items: 5,
         dots: false,
         autoplay: true,
         loop: true,
@@ -58,9 +58,6 @@
             992: {
                 items: 5,
             },
-            1200: {
-                items: 6
-            }
         }
     });
 
@@ -95,12 +92,76 @@
     /*------------------
         CountDown
     --------------------*/
-    var targetDate = new Date('2024-07-07T09:00:00').getTime();
+    // var targetDate = new Date('2024-07-07T09:00:00').getTime();
 
-    console.log(targetDate)
+    // console.log(targetDate)
 
-	$("#countdown").countdown(targetDate, function(event) {
-        $(this).html(event.strftime("<div class='cd-item'><span>%D</span> <p>Days</p> </div>" + "<div class='cd-item'><span>%H</span> <p>Hrs</p> </div>" + "<div class='cd-item'><span>%M</span> <p>Mins</p> </div>" + "<div class='cd-item'><span>%S</span> <p>Secs</p> </div>"));
-    });
+	// $("#countdown").countdown(targetDate, function(event) {
+    //     $(this).html(event.strftime("<div class='cd-item'><span>%D</span> <p>Days</p> </div>" + "<div class='cd-item'><span>%H</span> <p>Hrs</p> </div>" + "<div class='cd-item'><span>%M</span> <p>Mins</p> </div>" + "<div class='cd-item'><span>%S</span> <p>Secs</p> </div>"));
+    // });
+
+    const data = [
+        {
+            key: "participants",
+            value: 600,
+            suffix: "+"
+        },
+        {
+            key: "judges",
+            value: 24,
+        },
+        {
+            key: "sponsors",
+            value: 20,
+        },
+        {
+            key: "dollars raised",
+            value: 10000,
+            suffix: "+"
+        }
+    ]
+
+    const duration = 2000;
+
+    function animate(obj, index) {
+        let startTime = null;
+
+        let currentTime = Date.now();
+
+        const step = (currentTime) => {
+
+            if (!startTime) {
+                startTime = currentTime ;
+            }
+    
+            const progress = Math.min((currentTime - startTime)/ duration, 1);
+    
+            obj.innerHTML = `
+                <span>${Math.floor(progress * data[index]['value'])}${progress == 1 ? data[index]['suffix'] || "" : ""}</span>
+                <p>${data[index]['key']}</p>
+            `
+    
+            if (progress < 1) {
+            window.requestAnimationFrame(step);
+            } else {
+                window.cancelAnimationFrame(window.requestAnimationFrame(step));
+            }
+        };
+
+        window.requestAnimationFrame(step);
+    }
+
+
+    const load = () => {
+
+        for (const index in data) {
+            animate(
+                document.getElementById(`counter-${parseInt(index) + 1}`),
+                index
+            )
+        }
+    }
+    
+    load()
 
 })(jQuery);
