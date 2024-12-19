@@ -103,7 +103,7 @@
     const data = [
         {
             key: "participants",
-            value: 600,
+            value: 1000,
             suffix: "+"
         },
         {
@@ -129,24 +129,28 @@
         let currentTime = Date.now();
 
         const step = (currentTime) => {
-
             if (!startTime) {
-                startTime = currentTime ;
+                startTime = currentTime;
             }
     
-            const progress = Math.min((currentTime - startTime)/ duration, 1);
-    
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            const animatedValue = Math.floor(progress * data[index]['value']);
+            
             obj.innerHTML = `
-                <span>${Math.floor(progress * data[index]['value'])}${progress == 1 ? data[index]['suffix'] || "" : ""}</span>
+                <span>
+                    ${progress === 1 
+                        ? animatedValue.toLocaleString() + (data[index]['suffix'] || "")
+                        : animatedValue
+                    }
+                </span>
                 <p>${data[index]['key']}</p>
-            `
+            `;
     
             if (progress < 1) {
-            window.requestAnimationFrame(step);
-            } else {
-                window.cancelAnimationFrame(window.requestAnimationFrame(step));
+                window.requestAnimationFrame(step);
             }
         };
+    
 
         window.requestAnimationFrame(step);
     }
