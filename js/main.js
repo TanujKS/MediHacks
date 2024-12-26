@@ -103,7 +103,7 @@
     const data = [
         {
             key: "participants",
-            value: 1000,
+            value: 1200,
             suffix: "+"
         },
         {
