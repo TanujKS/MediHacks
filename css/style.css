@@ -579,11 +579,6 @@ ol {
 	overflow: hidden;
 }
 
-.team-member-section .img-row {
-	padding-left: 50;
-	padding-right: 50;
-}
-
 .team-member-section .section-title h2 {
 	color: #e3e3e3;
 }
@@ -684,6 +679,80 @@ ol {
 	display: block;
 }
 
+.project-item {
+	width: 100%;
+	float: left;
+	height: 600px;
+	position: relative;
+	overflow: hidden;
+	background-size: contain;    
+    background-position: center;  
+    background-repeat: no-repeat; 
+    background-color: #e3e3e3;  
+}
+
+.project-item:hover .project-link {
+	top: 0;
+}
+
+.project-item:hover .project-text {
+	left: 80px;
+}
+
+.project-item .project-link {
+	text-align: center;
+	position: relative;
+	top: -60px;
+	-webkit-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.project-item .project-link .project-link-inner {
+	display: inline-block;
+	padding: 10px 30px;	
+	border-radius: 0 0 4px 4px;
+}
+
+.project-item .project-link .project-link-inner a {
+	display: inline-block;
+	font-size: 24px;
+	color: #ffffff;
+	margin-right: 10px;
+}
+
+.project-item .project-link .project-link-inner img {
+	display: inline-block;
+}
+
+.project-item .project-link .project-link-inner a:last-child {
+	margin-right: 0;
+}
+
+.project-item .project-text {
+	background: #ffffff;
+	padding: 16px 18px 25px;
+	position: absolute;
+	left: calc(-1 * 60%);
+	bottom: 20px;
+	width: 60%;
+	-webkit-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.project-item .project-text h5 {
+	font-size: 20px;
+	color: #171822;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.project-item .project-text span {
+	font-size: 16px;
+	color: #f44949;
+	display: block;
+}
 /*---------------------
   Schedule Section
 -----------------------*/
@@ -1203,6 +1272,10 @@ ol {
 /*---------------------
   Footer
 -----------------------*/
+.sponsor-section {
+	padding-top: 150px;
+	background: #171822
+}
 
 .footer-section {
 	background: #171822;

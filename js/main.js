@@ -61,6 +61,16 @@
         }
     });
 
+    $(".projects-container").owlCarousel({
+        items: 1,
+        dots: true,
+        autoplay: true,
+        loop: true,
+        smartSpeed: 1200,
+        autoplayTimeout: 12000,
+        margin: 200,
+    });
+
     /*------------------------
 		Testimonial Slider
     ----------------------- */
